@@ -1,5 +1,5 @@
 #layout {
-    padding-left:500px; /* "left col (nav + list)" width */
+    padding-left: 500px; /* "left col (nav + list)" width */
     position: relative;
 }
 
@@ -9,9 +9,10 @@
     bottom: 0;
     overflow: auto;
 }
+
 #nav {
-    margin-left:-500px; /* "left col (nav + list)" width */
-    width:150px;
+    margin-left: -500px; /* "left col (nav + list)" width */
+    width: 150px;
     background: rgb(37, 42, 58);
     text-align: center;
     padding: 2em 0;
@@ -19,7 +20,7 @@
 
 #list {
     margin-left: -350px;
-    width:350px;
+    width: 350px;
     border-right: 1px solid #ddd;
 }
 
@@ -28,17 +29,20 @@
     border: none;
     text-align: left;
 }
+
 #nav .pure-menu a:hover,
 #nav .pure-menu a:focus {
     background: rgb(55, 60, 90);
 }
+
 #nav .pure-menu a {
     color: #fff;
     margin-left: 0.5em;
 }
+
 #nav .pure-menu-heading {
     border-bottom: none;
-    font-size:110%;
+    font-size: 110%;
     color: rgb(75, 113, 151);
 }
 
@@ -46,7 +50,7 @@
     display: none;
 }
 
-.email-count {
+.beer-count {
     color: rgb(75, 113, 151);
 }
 
@@ -59,12 +63,15 @@
     margin-right: 0.5em;
     border-radius: 3px;
 }
+
 .email-label-personal {
     background: #ffc94c;
 }
+
 .email-label-work {
     background: #41ccb4;
 }
+
 .email-label-travel {
     background: #40c365;
 }
@@ -75,11 +82,13 @@
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
 .primary-button {
     color: #fff;
     background: #1b98f8;
     margin: 1em 0;
 }
+
 .secondary-button {
     background: #fff;
     border: 1px solid #ddd;
@@ -88,43 +97,48 @@
     font-size: 80%;
 }
 
-
 /* Beer item style */
 
 .beer-item {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
+    cursor: pointer;
 }
+
 .beer-avatar {
     border-radius: 3px;
     margin-right: 0.5em;
 }
-.beer-name{
+
+.beer-name {
     margin: 0;
 }
-.beer-name {
+
+h5.brewery-name {
     text-transform: uppercase;
     color: #999;
+    margin: 0.7em 0em;
 }
+
 .beer-desc {
     font-size: 80%;
     margin: 0.4em 0;
 }
 
-
-.beer-item.active {
+.beer-item:hover {
     background: #eee;
 }
-.beer-item-unread {
+
+.beer-item.active {
     border-left: 6px solid #02a3c6;
 }
-
 
 /* Email Content Styles */
 .beer-content-header, .beer-content-body, .beer-content-footer {
     padding: 1em 2em;
 }
+
 .beer-content-header {
     border-bottom: 1px solid #ddd;
 }
@@ -132,23 +146,27 @@
 .beer-content-title {
     margin: 0.5em 0 0;
 }
+
 .beer-content-subtitle {
     font-size: 1em;
     margin: 0;
     font-weight: normal;
 }
+
 .beer-content-subtitle span {
     color: #999;
 }
+
 .beer-content-controls {
     margin-top: 2em;
     text-align: right;
 }
+
 .beer-content-controls .secondary-button {
     margin-bottom: 0.3em;
 }
 
-#loading-img{
+#loading-img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -156,4 +174,19 @@
     height: 322px;
     margin-top: -161px;
     margin-left: -202px;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+
+.img img {
+    max-width: 100%;
 }

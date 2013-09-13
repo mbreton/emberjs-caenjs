@@ -5,16 +5,74 @@
 </head>
 <body>
 
+<script type="text/x-handlebars">
+    <div class="pure-g-r content" id="layout">
+        <div class="pure-u" id="nav">
+            <div class="nav-inner">
+                <button class="pure-button primary-button">Create</button>
+                <div class="pure-menu pure-menu-open">
+                    <ul>
+                        <li>
+                            {{#link-to 'beers'}}
+                                Beers
+                                <span class="beer-count">({{nbBeers}})</span>
+                            {{/link-to}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{outlet}}
+    </div>
+</script>
 
-    <link rel="stylesheet" type="text/css" href="css/pure-min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/beers.css"/>
-    <!-- Libs -->
-    <script src="libs/jquery-2.0.3.js"></script>
-    <script src="libs/handlebars.js"></script>
-    <script src="libs/ember.js"></script>
-    <script src="libs/ember-data.js"></script>
-    <script src="libs/lodash.min.js"></script>
-    <script src="libs/moment.min.js"></script>
-    <script src="app.js"></script>
+<script type="text/x-handlebars" id="beers">
+    <div class="pure-u-1" id="list">
+        {{#each beer in model}}
+        {{#link-to 'beers.beer' beer.id tagName="div" class="beer-item"}}
+            <h5 class="brewery-name">{{beer.brewery}}</h5>
+            <h4 class="beer-name">{{beer.name}}</h4>
+            <p class="beer-desc">{{beer.description}}</p>
+        {{/link-to}}
+        {{/each}}
+    </div>
+    <div class="pure-u-1" id="main">
+        {{outlet}}
+    </div>
+</script>
+
+<script type="text/x-handlebars" id="beers/beer">
+    <div class="beer-content-header pure-g">
+        <div class="pure-u-1-2">
+            <div class="beer-content-title">
+                <h1>{{name}}</h1>
+                <p class="beer-content-subtitle">
+                    <i>{{abv}}</i>
+                    <span>(Created the {{date updated_at}})</span>
+                </p>
+            </div>
+        </div>
+        <div class="pure-u-1-2 beer-content-controls">
+        </div>
+    </div>
+    <div class="beer-content-body">
+        <div class="img">
+            <img class="beer-avatar" {{bindAttr src="imageUrl"}} />
+        </div>
+        <p>{{description}}</p>
+    </div>
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="css/pure-min.css"/>
+<link rel="stylesheet" type="text/css" href="css/beers.css"/>
+<!-- Libs -->
+<script src="libs/jquery-2.0.3.js"></script>
+<script src="libs/handlebars.js"></script>
+<script src="libs/ember.js"></script>
+<script src="libs/ember-data.js"></script>
+<script src="libs/lodash.min.js"></script>
+<script src="libs/moment.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
