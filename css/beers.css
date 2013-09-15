@@ -8,18 +8,44 @@
     top: 0;
     bottom: 0;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 #nav {
     margin-left: -500px; /* "left col (nav + list)" width */
-    width: 150px;
+    width: 200px;
     background: rgb(37, 42, 58);
     text-align: center;
     padding: 2em 0;
 }
 
+#nav h1{
+    font-family: detroit;
+    letter-spacing: normal;
+    color: #ffffff;
+    font-weight: normal;
+    margin: 0;
+}
+
+#nav p.by{
+    font-family: choco;
+    letter-spacing: normal;
+    color: #ffffff;
+    font-weight: normal;
+    margin: 0;
+}
+
+#nav h2{
+    font-family: choco;
+    letter-spacing: normal;
+    color: #41ccb4;
+    font-weight: normal;
+    font-size: 38px;
+    margin: 0;
+}
+
 #list {
-    margin-left: -350px;
+    margin-left: -300px;
     width: 350px;
     border-right: 1px solid #ddd;
 }
@@ -188,5 +214,22 @@ h5.brewery-name {
 }
 
 .img img {
-    max-width: 100%;
+    min-height: 100%;
+}
+
+@font-face {
+    font-family: "detroit";
+    src: url("detroit.ttf");
+}
+
+@font-face {
+    font-family: "choco";
+    src: url("choco.otf");
+}
+
+#main{
+    position: absolute;
+    left:552px;
+    right:0px;
+    width:auto;
 }
