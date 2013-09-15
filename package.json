@@ -1,0 +1,20 @@
+{
+    "name": "beer-caenjs",
+    "version": "0.0.1",
+    "author": "Mathieu Breton",
+    "description": "Live conding sur Ember.js",
+    "contributors": [
+        {
+            "name": "Mathieu Breton",
+            "email": "mathieubre@gmail.com"
+        }
+    ],
+    "dependencies" : {
+        "express"   :  "*",
+        "lodash" :  "*"
+    },
+    "license": "Apache License",
+    "engines": {
+        "node": ">=0.8"
+    }
+}
